@@ -4,7 +4,7 @@
 
 #include <pthread.h>
 
-#define TAMANHO 5
+#define TAMANHO 30
 #define LIVRE '-'
 #define SENSOR 'T'
 #define FOGO '@'
@@ -13,11 +13,11 @@
 // Matriz representando a floresta
 extern char floresta[TAMANHO][TAMANHO];
 
-// Mutexes e variáveis de condição para comunicação entre os nós
+// Mutexes e variÃ¡veis de condiÃ§Ã£o para comunicaÃ§Ã£o entre os nÃ³s
 extern pthread_mutex_t mutex[TAMANHO][TAMANHO];
 extern pthread_cond_t cond[TAMANHO][TAMANHO];
 
-// Funções para inicializar e lidar com o sistema
+// FunÃ§Ãµes para inicializar e lidar com o sistema
 void inicializar_floresta();
 void *funcao_sensor(void *param);
 void *gerar_incendio(void *param);
